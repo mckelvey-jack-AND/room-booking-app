@@ -1,38 +1,90 @@
-.App {
+.app {
+  margin: 12px 24px;
+}
+
+.room-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.room-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.red-background {
+  background-color: red;
+}
+
+.green-background {
+  background-color: green;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.and {
+  color: white;
+  background: red;
+}
+
+.room-name {
+  font-size: 32px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tick-container {
+  width: 100px;
+  border-radius: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-now {
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-now:hover {
+  cursor: pointer;
+}
+
+.calender-image {
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 2px;
+  background: white;
+  border-radius: 4px;
+}
+
+.calender-image:hover {
+  cursor: pointer;
+}
+
+.room-links-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 24px;
+  margin-top: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.home-link {
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.room-link {
+  color: black;
+  font-size: 24px;
+}
+a {
+  text-decoration: none;
 }

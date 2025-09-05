@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Enterprise from "./pages/Enterprise";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Vortex from "./pages/Vortex";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <header>
+          <a href="/" className="home-link">
+            <span className="and">AND</span> Book
+          </a>
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Enterprise" element={<Enterprise />} />{" "}
+          <Route path="/Vortex" element={<Vortex />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
