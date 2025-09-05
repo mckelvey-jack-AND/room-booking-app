@@ -1,8 +1,11 @@
+import BookingModal from "../components/BookingModal.tsx";
 import GreenTick from "../GreenTick";
 import RedX from "../RedX";
+import { useState } from "react";
 
 function Enterprise() {
-  const room = { name: "Enterprise", id: 1, isBooked: false };
+  const room = { name: "Enterprise", id: 1, isBooked: true };
+  const [isModalOpen, updateIsModalOpen] = useState(false);
   return (
     <div className="app">
       <div className="room-cards-container relative">
@@ -27,7 +30,7 @@ function Enterprise() {
           </div>
         </div>
       </div>
-      <div></div>
+      {isModalOpen && <BookingModal updateIsModalOpen={updateIsModalOpen} />}
     </div>
   );
 }
